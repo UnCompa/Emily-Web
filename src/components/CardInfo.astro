@@ -1,13 +1,16 @@
 ---
 interface Props {
-  title?: String,
-  icon?: String,
-  text?: String,
-  img?: string
+  title?: String;
+  icon?: String;
+  text?: String;
+  img?: string;
 }
-const {title, icon, text, img} = Astro.props
+const { title, icon, text, img } = Astro.props;
 ---
-<div class="shadow-2xl h-max w-full shadow-MoradoPastel/30 bg-gradient-to-br from-darkColor to-zinc-900/50 hover:bg-zinc-800 text-white p-4 transition-all hover:shadow-RosaSuave/30">
+
+<div
+  class="cardInfo shadow-2xl h-max w-full shadow-MoradoPastel/30 bg-gradient-to-br from-darkColor to-zinc-900/50 hover:bg-zinc-800 text-white p-4 transition-all hover:shadow-RosaSuave/30"
+>
   <header class="flex items-center title">
     <i class={`fa-solid ${icon}`}></i>
     <h2>{title}</h2>
@@ -16,11 +19,13 @@ const {title, icon, text, img} = Astro.props
     class="h-1 rounded w-1/2 my-2 bg-gradient-to-br from-RosaSuave to-MoradoPastel"
   >
   </div>
-  <p class="text-start text-lg font-light">
+  <p class="text-start text-lg lg:text-xl font-light">
     {text}
   </p>
 </div>
-<div class="bg-darkColor p-4 h-96 w-full rounded shadow-2xl shadow-MoradoPastel/50 group text-white">
+<div
+  class="cardImg bg-darkColor p-4 h-96 w-full rounded shadow-2xl shadow-MoradoPastel/50 group text-white"
+>
   <img
     src={img}
     alt="Imagen del contenido"
@@ -40,3 +45,21 @@ const {title, icon, text, img} = Astro.props
     box-shadow: 0 30px 50px #f4bfbf77;
   }
 </style>
+<script>
+  import ScrollReveal from "scrollreveal/dist/scrollreveal";
+  ScrollReveal().reveal(".cardInfo", {
+    origin: "bottom",
+    distance: "10%",
+    opacity: 0,
+    reset: false,
+    mobile: false,
+  });
+
+  ScrollReveal().reveal(".cardImg", {
+    origin: "bottom",
+    distance: "10%",
+    opacity: 0,
+    reset: false,
+    mobile: false,
+  });
+</script>

@@ -48,6 +48,7 @@ body {
   );
   padding: .5em;
   animation: heroA 0.5s infinite ease-out;
+  box-shadow: 0 10px 50px #47d1d1aa;
 }
 
 @keyframes heroA {
@@ -113,6 +114,7 @@ h1 {
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 20px #b19cd9aa;
 }
 
 h2 {
@@ -123,12 +125,10 @@ h2 {
 
 p {
   font-weight: 600;
-  text-align: center;
 }
 .description {
   font-size: clamp(1rem, 2vw + 1em, 1.5rem);
 }
-
 .hero-arrow {
   font-size: clamp(1.5rem, 2vw + 1em, 3rem);
   margin: 1em 0em;

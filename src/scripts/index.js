@@ -1,52 +1,24 @@
-import ScrollReveal from 'scrollreveal/dist/scrollreveal'
-ScrollReveal().reveal('.card', {
-  origin: "left",
-  distance: "100px",
-  opacity: 0.1,
-  reset: false,
-})
-
-ScrollReveal().reveal('.card-img', {
-  origin: "bottom",
-  distance: "100px",
-  opacity: 0.1,
-  reset: false,
-})
-
-var options = {
-  strings: ['La mejor chica que puedes conocer ❤'], // Texto que se escribirá
+import Typed from "typed.js";
+import confetti from "canvas-confetti";
+let options = {
+  strings: ["La mejor chica que puedes conocer ❤", "Una chica amable y simpatica", "Su pasion por los videojuegos","Su forma de ser reservada","Emily adora ver peliculas"], // Texto que se escribirá
   typeSpeed: 20,
-  loop: false, // Establece si quieres que el texto se repita después de escribirlo
-  cursorChar: '',
-  onComplete: function() {
-    const defaults = {
-      spread: 360,
-      ticks: 100,
-      gravity: 0,
-      decay: 0.94,
-      startVelocity: 30,
-      shapes: ["heart"],
-      colors: ["FFC0CB", "FF69B4", "FF1493", "C71585"],
-    };
-
-    confetti({
-      ...defaults,
-      particleCount: 50,
-      scalar: 2,
-    });
-
-    confetti({
-      ...defaults,
-      particleCount: 25,
-      scalar: 3,
-    });
-
-    confetti({
-      ...defaults,
-      particleCount: 10,
-      scalar: 4,
-    });
-  }
+  smartBackspace: true,
+  backSpeed: 30,
+  backDelay: 2000,
+  showCursor: false,
+  cursorChar: '|',
+  shuffle: true,
+  loop: true, // Establece si quieres que el texto se repita después de escribirlo
 };
-
-var typed = new Typed('#description', options);
+var myConfetti = {
+  particleCount: 100, // Cantidad de corazones
+  spread: 100, // Área de dispersión
+  angle: 90, // Ángulo de dispersión
+  origin: { y: 0.6 }, // Origen de la dispersión (parte superior)
+  colors: ["#ff0000", "#ff69b4"], // Colores de los corazones
+  shapes: ["heart"], // Forma del confeti (corazones)
+  zIndex: 1000, // Z-index para asegurar que esté encima de otros elementos
+};
+confetti(myConfetti);
+var typed = new Typed("#description", options);
