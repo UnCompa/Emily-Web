@@ -1,4 +1,4 @@
-import ScrollReveal from 'scrollreveal'
+import ScrollReveal from 'scrollreveal/dist/scrollreveal'
 ScrollReveal().reveal('.card', {
   origin: "left",
   distance: "100px",
