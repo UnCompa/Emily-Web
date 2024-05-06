@@ -2,13 +2,15 @@ import ScrollReveal from 'scrollreveal'
 ScrollReveal().reveal('.card', {
   origin: "left",
   distance: "100px",
-  opacity: 0.1
+  opacity: 0.1,
+  reset: false,
 })
 
 ScrollReveal().reveal('.card-img', {
   origin: "bottom",
   distance: "100px",
-  opacity: 0.1
+  opacity: 0.1,
+  reset: false,
 })
 
 var options = {

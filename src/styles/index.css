@@ -9,7 +9,7 @@
 }
 
 body {
-  background-image: url("./imgs/back.jpg");
+  background-image: url("/imgs/back.jpg");
   background-size: cover;
   backdrop-filter: brightness(60%);
 }
