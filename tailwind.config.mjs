@@ -6,7 +6,8 @@ export default {
 			colors: {
 				"darkColor": "#30313b",
 				"MoradoPastel": "#b19cd9",
-				"RosaSuave": "#f4bfbf"
+				"RosaSuave": "#f4bfbf",
+				"Turquesa": "#47d1d1"
 			},
 			boxShadowColor: {
 				"moradaSuave": "0 30px 50px #b19cd977"

@@ -1,0 +1,30 @@
+---
+import ButtonNavigation from "./ButtonNavigation.astro";
+interface Props {
+  title?: String,
+  text?: String,
+  icon?: String,
+  img?: string,
+  url?: String
+}
+const {title = "Seccion",text,icon,img,url} = Astro.props
+---
+
+<div
+  class="bg-zinc-950 p-4 border-2 border-Turquesa rounded shadow-2xl shadow-Turquesa/50 text-white h-max"
+>
+  <header class="title">
+    <i class={`fa-solid ${icon}`}></i>
+    <h2>{title}</h2>
+  </header>
+  <div class="line"></div>
+  <p class="text-xl p-2 font-light lg:text-2xl">
+    {text}
+  </p>
+  <ButtonNavigation url={url} />
+</div>
+<div
+  class="text-white max-h-96 bg-zinc-950 p-4 border-2 border-Turquesa shadow-2xl shadow-Turquesa/30"
+>
+  <img src={img} alt={`PAra la seccion de: ${title}`} loading="lazy" class="object-cover h-full w-full"/>
+</div>

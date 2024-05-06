@@ -1,18 +1,19 @@
 ---
-import CardImg from "../components/CardImg.astro";
+import CardNavigation from "../components/CardNavigation.astro";
 import CardInfo from "../components/CardInfo.astro";
 import Layout from "../layouts/Layout.astro";
 import "../styles/index.css";
+const randomNumber = Math.random();
+var scaledNumber = Math.floor(randomNumber * (8 - 1 + 1)) + 1;
+console.log(randomNumber);
+console.log(scaledNumber);
+const EmiUrl = `/imgs/Emi (${scaledNumber}).jpeg`;
 ---
 
 <Layout title="Emily Website | Para la mejor chica ♥">
   <div class="hero">
     <div class="hero-img">
-      <img
-        src="/imgs/Emi2.jpg"
-        alt="Imagen de inicio sobre Emily"
-        loading="lazy"
-      />
+      <img src={EmiUrl} alt="Imagen de inicio sobre Emily" loading="lazy" />
     </div>
     <h1 aria-label="Estefania Emily Astudillo Tuaza">
       "Estefania Emily Astudillo Tuaza"
@@ -152,99 +153,48 @@ import "../styles/index.css";
 				después de cumplir con sus deberes.`}
       />
     </section>
-    <div class="card-title">
+    <div class="h-full w-full bg-zinc-950 border-t-2 border-b-2 border-Turquesa text-center text-3xl text-white font-bold py-4">
       <h3>Mas contenido</h3>
     </div>
     <section class="card-links">
-      <div class="card">
-        <header class="title">
-          <i class="fa-solid fa-info"></i>
-          <h2>Información</h2>
-        </header>
-        <div class="line"></div>
-        <p>
-          En esta seccion hay Información sobre fechas importantes, has click en
-          el boton para ir
-        </p>
-        <div class="more">
-          <a href="/info">
-            <span>Ver más</span>
-          </a>
-        </div>
-      </div>
-      <div class="card-img">
-        <img src="/imgs/Foto10.jpg" alt="./" loading="lazy" />
-      </div>
-      <div class="card">
-        <header class="title">
-          <i class="fa-solid fa-image"></i>
-          <h2>Galeria</h2>
-        </header>
-        <div class="line"></div>
-        <p>Una seccion con fotos sobre Emily o cosas que destaca ella aqui:</p>
-        <div class="more">
-          <a href="/galeria">
-            <span>Ver más</span>
-          </a>
-        </div>
-      </div>
-      <div class="card-img">
-        <img src="/imgs/Emi2.jpg" alt="Imagen del contenido" loading="lazy" />
-      </div>
-      <div class="card">
-        <header class="title">
-          <i class="fa-solid fa-music"></i>
-          <h2>Musicas</h2>
-        </header>
-        <div class="line"></div>
-        <p>Una seccion con las canciones favoritas de emi, solo unas cuantas</p>
-        <div class="more">
-          <a href="/musicas">
-            <span>Ver más</span>
-          </a>
-        </div>
-      </div>
-      <div class="card-img">
-        <img src="/imgs/Foto11.jpg" alt="Imagen del contenido" loading="lazy" />
-      </div>
-      <div class="card">
-        <header class="title">
-          <i class="fa-solid fa-play"></i>
-          <h2>Juegos</h2>
-        </header>
-        <div class="line"></div>
-        <p>
-          Aqui habra un catalogo de videjuegos que Emily le gusta, son sus
-          favoritos
-        </p>
-        <div class="more">
-          <a href="/juegos">
-            <span>Ver más</span>
-          </a>
-        </div>
-      </div>
-      <div class="card-img">
-        <img src="/imgs/Foto4.jpg" alt="Imagen del contenido" loading="lazy" />
-      </div>
-      <div class="card">
-        <header class="title">
-          <i class="fa-solid fa-video"></i>
-          <h2>Videos</h2>
-        </header>
-        <div class="line"></div>
-        <p>
-          Aqui habra un catalogo de videjuegos que Emily le gusta, son sus
-          favoritos
-        </p>
-        <div class="more">
-          <a href="/video">
-            <span>Ver más</span>
-          </a>
-        </div>
-      </div>
-      <div class="card-img">
-        <img src="/imgs/Foto5.jpg" alt="Imagen del contenido" loading="lazy" />
-      </div>
+      <CardNavigation
+        title="Información"
+        icon={"fa-info"}
+        img="/imgs/Foto10.jpg"
+				url={"/info"}
+        text={`En esta seccion hay Información sobre fechas importantes, has click en
+          el boton para ir`}
+      />
+      <CardNavigation
+        title="Galeria"
+        icon={"fa-image"}
+        img="/imgs/Emi1.jpg"
+				url={"/galeria"}
+        text={`Una seccion con fotos sobre Emily o cosas que destaca ella aqui:`}
+      />
+      <CardNavigation
+        title="Musicas"
+        icon={"fa-music"}
+        img="/imgs/Foto11.jpg"
+				url={"/musicas"}
+        text={`Una seccion con las canciones favoritas de emi, solo unas cuantas`}
+      />
+      <CardNavigation
+        title="Juegos"
+        icon={"fa-play"}
+        img="/imgs/Foto4.jpg"
+				url={"/juegos"}
+        text={`Aqui habra un catalogo de videjuegos que Emily le gusta, son sus
+          favoritos`}
+      />
+      <CardNavigation
+        title="Videos"
+        icon={"fa-video"}
+        img="/imgs/Foto5.jpg"
+				url={"/juegos"}
+        text={`Aqui habra un catalogo de videjuegos que Emily le gusta, son sus
+          favoritos`}
+      />
     </section>
   </main>
   <script src="../scripts/index.js"></script>
