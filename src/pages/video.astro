@@ -1,0 +1,43 @@
+---
+import Layout from "../layouts/Layout.astro";
+import "../styles/video.css"
+import 'plyr/dist/plyr.css'
+---
+
+<Layout title="Videos">
+  <div class="hero">
+    <div class="hero-content">
+      <i class="fa-solid fa-star"></i>
+      <h1>Videos</h1>
+      <p>Los videojuegos favoritos de Emily</p>
+      <div class="hero-links">
+        <a href="/index.html">
+          <button> Inicio </button>
+        </a>
+        <a href="/info.html">
+          <button> Información </button>
+        </a>
+        <a href="/galeria.html">
+          <button> Galeria </button>
+        </a>
+        <a href="/musicas.html">
+          <button> Musicas </button>
+        </a>
+        <a href="/juegos.html">
+          <button> Juegos </button>
+        </a>
+      </div>
+    </div>
+  </div>
+  <main class="layout">
+    <video id="video" controls src="/videos/Videoemi (1).mp4"
+    ></video>
+    <video id="video" controls src="/videos/Videoemi (2).mp4"
+    ></video>
+    <video id="video" controls src="/videos/Videoemi (3).mp4"
+    ></video>
+    <video id="video" controls src="/videos/Videoemi (4).mp4"
+    ></video>
+  </main>
+  <script src="../scripts/video.js"></script>
+</Layout>
