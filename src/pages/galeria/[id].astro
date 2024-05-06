@@ -1,0 +1,11 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import DetailsImg from '../../components/DetailsImg'
+const {id} = Astro.params
+console.log(id);
+
+---
+
+<Layout title="Hola">
+  <DetailsImg id={id} client:load/>
+</Layout>

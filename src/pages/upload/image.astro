@@ -1,0 +1,11 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import SubmitImg from '../../components/SubmitImg'
+---
+
+<Layout title="Sube tu imagen aqui">
+  <main class="bg-zinc-900 min-h-screen h-full w-full text-white">
+    <h1 class="text-2xl p-4 text-center">Sube tu imagen aqui</h1>
+    <SubmitImg client:load/>
+  </main>
+</Layout>

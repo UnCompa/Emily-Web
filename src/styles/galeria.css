@@ -10,18 +10,23 @@
   --color-rosa-suave: #f4bfbf;
   --color-gris-claro: #e0e0e0;
   --color-blanco: #ffffff;
+  --color-negro: #121212;
   --color-amarillo-palido: #fffac8;
   --color-verde-menta: #a1e7af;
   --color-azul-claro: #add8e6;
 }
-
+html {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-morado-pastel) #121212;
+}
 body {
   font-family: "Indie Flower", cursive;
-  background-image: url("./imgs/back5.jpg");
-  background-size: cover;
+  background-image: url("./imgs/galeriaBack.jpg");
+  background-size: 100%;
+  background-position: center;
 }
 .hero {
-  background: var(--color-blanco);
+  background: var(--color-negro);
   height: 100vh;
   display: grid;
   place-items: center;
@@ -48,7 +53,7 @@ body {
     background-position: 0 80rem;
   }
 }
-i {
+.icon {
   font-size: clamp(2.5rem, 3vw + 1em, 4rem);
   background: linear-gradient(45deg, var(--color-turquesa), var(--color-verde-menta));
   -webkit-background-clip: text;

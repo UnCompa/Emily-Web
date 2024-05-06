@@ -11,6 +11,10 @@ export default {
 			},
 			boxShadowColor: {
 				"moradaSuave": "0 30px 50px #b19cd977"
+			},
+			fontFamily: {
+				"Flower": "",
+				"Anta": ["Anta","sans-serif"]
 			}
 		},
 	},

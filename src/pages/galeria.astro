@@ -1,57 +1,44 @@
 ---
-import CardImg from "../components/CardImg.astro";
+import CardImg from "../components/CardImg.jsx"
+import ViewImgs from "../components/ViewImgs";
 import Layout from "../layouts/Layout.astro";
-import "../styles/galeria.css"
+import "../styles/galeria.css";
 ---
 
 <Layout title="Imagenes de Emi y mas">
   <div class="hero">
     <div class="hero-content">
-      <i class="fa-solid fa-image"></i>
+      <i class="fa-solid fa-image icon"></i>
       <h1>Galeria</h1>
       <p>Fotos compartidas por Emily</p>
       <div class="hero-links">
         <a href="/index.html">
-          <button>
-            Inicio
-          </button>
+          <button> Inicio </button>
         </a>
         <a href="/info">
-          <button>
-            Información
-          </button>
+          <button> Información </button>
         </a>
         <a href="/musicas">
-          <button>
-            Musicas
-          </button>
+          <button> Musicas </button>
         </a>
         <a href="/video">
-          <button>
-            Videos
-          </button>
+          <button> Videos </button>
         </a>
         <a href="/juegos">
-          <button>
-            Juegos
-          </button>
+          <button> Juegos </button>
         </a>
       </div>
-      <div class="text-black">
-        <a href="/upload/image" class="bg-green-500">Sube tu imagen</a>
+      <div class="text-black my-8">
+        <a
+          href="/upload/image"
+          class="bg-green-300 hover:bg-emerald-500 shadow-2xl hover:shadow-emerald-500 p-2 px-4 rounded-full text-black text-xl flex items-center gap-2 transition-all"
+          ><span>Sube tu imagen</span>
+          <i class="fa-solid fa-image text-black"></i></a
+        >
       </div>
     </div>
   </div>
   <main>
-    <CardImg img="/imgs/Emi1.jpg"/>
-    <CardImg img="/imgs/Emi2.jpg"/>
-    <CardImg img="/imgs/Emi (1).jpeg"/>
-    <CardImg img="/imgs/Emi (2).jpeg"/>
-    <CardImg img="/imgs/Emi (3).jpeg"/>
-    <CardImg img="/imgs/Emi (4).jpeg"/>
-    <CardImg img="/imgs/Emi (5).jpeg"/>
-    <CardImg img="/imgs/Emi (6).jpeg"/>
-    <CardImg img="/imgs/Emi (7).jpeg"/>
-    <CardImg img="/imgs/Emi (8).jpeg"/>
+    <ViewImgs client:load/>
   </main>
 </Layout>
