@@ -9,9 +9,10 @@
 }
 
 body {
-  background-image: url("/imgs/back.jpg");
-  background-size: cover;
-  backdrop-filter: brightness(60%);
+  background-image: url("/imgs/background.jpg");
+  background-size: 100%;
+  background-position: center center;
+  backdrop-filter: brightness(30%);
 }
 
 :root {
@@ -186,7 +187,7 @@ p {
   border-radius: 5px;
   padding: 0.6em;
   color: #fff;
-  box-shadow: 0 0 50px var(--color-morado-pastel);
+  box-shadow: 0 30px 50px #b19cd977;
 }
 
 .title {
@@ -234,7 +235,7 @@ p {
   width: 100%;
   background: #30313b;
   border-radius: 5px;
-  box-shadow: 0 0 50px var(--color-morado-pastel);
+  box-shadow: 0 30px 50px #b19cd977;
 }
 
 .card-img img {

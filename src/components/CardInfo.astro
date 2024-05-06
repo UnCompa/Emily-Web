@@ -1,0 +1,42 @@
+---
+interface Props {
+  title?: String,
+  icon?: String,
+  text?: String,
+  img?: string
+}
+const {title, icon, text, img} = Astro.props
+---
+<div class="shadow-2xl h-max w-full shadow-MoradoPastel/30 bg-gradient-to-br from-darkColor to-zinc-900/50 hover:bg-zinc-800 text-white p-4 transition-all hover:shadow-RosaSuave/30">
+  <header class="flex items-center title">
+    <i class={`fa-solid ${icon}`}></i>
+    <h2>{title}</h2>
+  </header>
+  <div
+    class="h-1 rounded w-1/2 my-2 bg-gradient-to-br from-RosaSuave to-MoradoPastel"
+  >
+  </div>
+  <p class="text-start text-lg font-light">
+    {text}
+  </p>
+</div>
+<div class="bg-darkColor p-4 h-96 w-full rounded shadow-2xl shadow-MoradoPastel/50 group text-white">
+  <img
+    src={img}
+    alt="Imagen del contenido"
+    loading="lazy"
+    class="transition-all object-center brightness-110 saturate-150 border-2 h-full w-full object-cover border-MoradoPastel group-active:scale-110"
+  />
+</div>
+<style>
+  .title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0 0.3em;
+    padding: 0.2em 0.3em;
+  }
+  .boxShadowAlt {
+    box-shadow: 0 30px 50px #f4bfbf77;
+  }
+</style>
