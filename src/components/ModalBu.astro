@@ -1,0 +1,39 @@
+<div
+  id="modal"
+  class="bg-zinc-900/50 z-20 h-screen fixed bottom-0 w-full items-center justify-center hidden"
+>
+  <div class="h-1/2 w-96 shake">
+    <img src="/imgs/screamer.jpg" alt="" class="h-full w-full object-cover" < />
+  </div>
+</div>
+<script>
+  const button = document.getElementById("button");
+  button.addEventListener("click", () => {
+    const modal = document.getElementById("modal");
+    modal.classList.remove("hidden");
+    modal.classList.add("flex");
+    const audio = new Audio("/public/sounds/screamer.mp3");
+    audio.play();
+    setTimeout(() => {
+      modal.classList.add("hidden");
+      modal.classList.remove("flex");
+      button.classList.add("hidden")
+    }, 6000);
+  });
+</script>
+<style>
+  .shake {
+    animation: shake 100ms infinite alternate;
+  }
+  @keyframes shake {
+    0% {
+      transform: translateX(10px);
+    }
+    50% {
+      transform: translateX(0px);
+    }
+    100% {
+      transform: translateX(-10px);
+    }
+  }
+</style>

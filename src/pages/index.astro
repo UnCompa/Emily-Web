@@ -1,6 +1,7 @@
 ---
 import CardNavigation from "../components/CardNavigation.astro";
 import CardInfo from "../components/CardInfo.astro";
+import ModalBu from "../components/ModalBu.astro";
 import Layout from "../layouts/Layout.astro";
 import "../styles/index.css";
 const randomNumber = Math.random();
@@ -11,6 +12,12 @@ const EmiUrl = `/imgs/Emi (${scaledNumber}).jpeg`;
 ---
 
 <Layout title="Emily Website | Para la mejor chica ♥">
+	<ModalBu/>
+	<div class="h-max w-max fixed top-0 z-10 flex items-end">
+		<div class="flex items-end h-max p-4">
+			<button id="button" class="bg-zinc-900 py-4 px-6 text-white rounded-full font-Anta text-2xl animate-pulse">?</button>
+		</div>
+	</div>
   <div class="hero">
     <div class="hero-img">
       <img src={EmiUrl} alt="Imagen de inicio sobre Emily" loading="lazy" />
@@ -153,7 +160,9 @@ const EmiUrl = `/imgs/Emi (${scaledNumber}).jpeg`;
 				después de cumplir con sus deberes.`}
       />
     </section>
-    <div class="h-full w-full bg-zinc-950 border-t-2 border-b-2 border-Turquesa text-center text-3xl text-white font-bold py-4">
+    <div
+      class="h-full w-full bg-zinc-950 border-t-2 border-b-2 border-Turquesa text-center text-3xl text-white font-bold py-4"
+    >
       <h3>Mas contenido</h3>
     </div>
     <section class="card-links">
@@ -161,7 +170,7 @@ const EmiUrl = `/imgs/Emi (${scaledNumber}).jpeg`;
         title="Información"
         icon={"fa-info"}
         img="/imgs/Foto10.jpg"
-				url={"/info"}
+        url={"/info"}
         text={`En esta seccion hay Información sobre fechas importantes, has click en
           el boton para ir`}
       />
@@ -169,21 +178,21 @@ const EmiUrl = `/imgs/Emi (${scaledNumber}).jpeg`;
         title="Galeria"
         icon={"fa-image"}
         img="/imgs/Emi1.jpg"
-				url={"/galeria"}
+        url={"/galeria"}
         text={`Una seccion con fotos sobre Emily o cosas que destaca ella aqui:`}
       />
       <CardNavigation
         title="Musicas"
         icon={"fa-music"}
         img="/imgs/Foto11.jpg"
-				url={"/musicas"}
+        url={"/musicas"}
         text={`Una seccion con las canciones favoritas de emi, solo unas cuantas`}
       />
       <CardNavigation
         title="Juegos"
         icon={"fa-play"}
         img="/imgs/Foto4.jpg"
-				url={"/juegos"}
+        url={"/juegos"}
         text={`Aqui habra un catalogo de videjuegos que Emily le gusta, son sus
           favoritos`}
       />
@@ -191,11 +200,11 @@ const EmiUrl = `/imgs/Emi (${scaledNumber}).jpeg`;
         title="Videos"
         icon={"fa-video"}
         img="/imgs/Foto5.jpg"
-				url={"/juegos"}
+        url={"/juegos"}
         text={`Aqui habra un catalogo de videjuegos que Emily le gusta, son sus
           favoritos`}
       />
     </section>
   </main>
-  <script src="../scripts/index.js"></script>
 </Layout>
+<script src="../scripts/index.js"></script>

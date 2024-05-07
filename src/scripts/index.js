@@ -22,3 +22,28 @@ var myConfetti = {
 };
 confetti(myConfetti);
 var typed = new Typed("#description", options);
+
+document.addEventListener('DOMContentLoaded', function() {
+  var button = document.getElementById('button');
+  var audioPermissionPrompt = document.getElementById('audioPermissionPrompt');
+
+  button.addEventListener('click', function() {
+      if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+          navigator.mediaDevices.getUserMedia({ audio: true })
+          .then(function(stream) {
+              // Permiso concedido
+              console.log('Permiso de audio concedido');
+              audioPermissionPrompt.innerText = 'Permiso de audio concedido';
+          })
+          .catch(function(error) {
+              // Permiso denegado
+              console.error('Error al obtener permiso de audio:', error);
+              audioPermissionPrompt.innerText = 'Error al obtener permiso de audio';
+          });
+      } else {
+          console.error('getUserMedia no está soportado en este navegador');
+          audioPermissionPrompt.innerText = 'getUserMedia no está soportado en este navegador';
+      }
+  });
+});
+
